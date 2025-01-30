@@ -12,9 +12,281 @@
     />
     <title>Portfolio</title>
     <style>
-      h1,
-      h2 {
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      header {
+        height: 700px;
+        width: 100%;
+        background-color: #c6c8c9;
+        position: relative;
+        border-radius: 50px;
+      }
+      .header-img {
+        border-radius: 50%;
+        width: 130px;
+        height: 130px;
+        position: absolute;
+        left: 52%;
+        top: 250px;
+        border: 3px solid white;
+      }
+      header pre {
+        position: absolute;
+        left: 43%;
+        top: 400px;
         font-family: "Open Sans", serif;
+        font-size: 50px;
+        color: #323234;
+      }
+      .header-but {
+        position: absolute;
+        left: 52%;
+        top: 600px;
+        padding: 10px;
+        width: 150px;
+        border-radius: 9px;
+        background-color: #a4ca36;
+        border: #c6c8c9;
+      }
+      #nav {
+        text-align: center;
+        padding: 20px;
+        background-color: #323234;
+      }
+      #nav a {
+        padding-left: 20px;
+        text-decoration: none;
+        color: aliceblue;
+        margin-left: 5px;
+      }
+      #nav a:hover {
+        border-bottom: 2px solid #a4ca36;
+        padding: 10px;
+      }
+      @media screen and (max-width: 1024px) {
+        #nav a {
+          padding-left: 20px;
+          margin-left: 5px;
+        }
+      }
+      #about-me {
+        width: 50%;
+        height: 700px;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        background-color: #151515;
+        border-radius: 50px 0px 0px 50px;
+      }
+      #about-me pre {
+        position: absolute;
+        left: 5%;
+        top: 150px;
+        font-family: "Open Sans", serif;
+        font-size: 35px;
+        color: #c6c8c9;
+        font-weight: bold;
+      }
+      #about-me p {
+        position: absolute;
+        left: 16%;
+        top: 260px;
+        font-family: "Open Sans", serif;
+        width: 520px;
+        color: #c6c8c9;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .skills {
+        width: 50%;
+        height: 700px;
+        position: absolute;
+        top: 700px;
+        right: 0;
+        background-color: #151515;
+        border-radius: 0px 50px 50px 0px;
+      }
+      #card1 {
+        height: 280px;
+        width: 230px;
+        background-color: #1f1f21;
+        position: absolute;
+        left: 100px;
+        top: 35px;
+        border-radius: 10px;
+        border: none;
+      }
+      #card2 {
+        border: none;
+        height: 280px;
+        width: 230px;
+        background-color: #1f1f21;
+        position: absolute;
+        left: 100px;
+        top: 330px;
+        border-radius: 10px;
+      }
+      #card3 {
+        height: 280px;
+        width: 230px;
+        border: none;
+        background-color: #1f1f21;
+        position: absolute;
+        left: 345px;
+        top: 75px;
+        border-radius: 10px;
+      }
+      #card4 {
+        height: 280px;
+        width: 230px;
+        border: none;
+        background-color: #1f1f21;
+        position: absolute;
+        left: 345px;
+        top: 370px;
+        border-radius: 10px;
+      }
+      #see-more {
+        position: absolute;
+        left: 140px;
+        top: 630px;
+        padding: 10px;
+        width: 150px;
+        border-radius: 9px;
+        background-color: #a4ca36;
+        border: #c6c8c9;
+      }
+      .card-pro {
+        color: #a4ca36;
+        font-weight: bold;
+        text-align: center;
+        padding: 10px;
+      }
+      .card-h3 {
+        position: absolute;
+        left: 10px;
+        top: 200px;
+      }
+      .card-p {
+        position: absolute;
+        left: 10px;
+        top: 230px;
+      }
+      #certifications h2 {
+        text-align: center;
+        font-weight: bold;
+        color: #323234;
+        padding: 20px;
+      }
+      figure {
+        position: absolute;
+        height: 700px;
+        width: 100%;
+        background-color: #c6c8c9;
+        border-radius: 50px;
+      }
+      #fig-header {
+        text-align: center;
+        font-weight: bold;
+        padding: 20px;
+        color: #323234;
+        font-size: 30px;
+        padding-top: 50px;
+      }
+      #fig-big-header {
+        text-align: center;
+      }
+      #fig-card1 {
+        width: 350px;
+        height: 300px;
+        background-color: #a4ca36;
+        position: absolute;
+        left: 150px;
+        top: 180px;
+        margin-top: 25px;
+        border-radius: 8px;
+      }
+      .fig-abus-square {
+        width: 90px;
+        height: 90px;
+        position: absolute;
+        background-color: #c6c8c9;
+        position: relative;
+        margin-top: 30px;
+        margin-left: 130px;
+        text-align: center;
+        border-radius: 8px;
+      }
+      .fig-sq-emoji {
+        position: absolute;
+        right: 8px;
+        top: -24px;
+        font-size: 100px;
+        color: #323234;
+      }
+      #fig-card1 h3 {
+        text-align: center;
+        font-size: 25px;
+        padding-top: 10px;
+        color: #323234;
+      }
+      #fig-card1 p {
+        text-align: justify;
+        font-size: 16px;
+        padding: 20px 30px 20px;
+        line-height: 1.5;
+        color: #323234;
+      }
+      #fig-card2 {
+        width: 350px;
+        height: 300px;
+        position: absolute;
+        left: 580px;
+        top: 180px;
+        margin-top: 25px;
+        border-radius: 8px;
+        background-color: #a4ca36;
+      }
+      #fig-card2 h3 {
+        text-align: center;
+        font-size: 25px;
+        padding-top: 10px;
+        color: #323234;
+      }
+      #fig-card2 p {
+        text-align: justify;
+        font-size: 16px;
+        padding: 20px 30px 20px;
+        line-height: 1.5;
+        color: #323234;
+      }
+      #fig-card3 {
+        width: 350px;
+        height: 300px;
+        position: absolute;
+        left: 1000px;
+        top: 180px;
+        margin-top: 25px;
+        background-color: #a4ca36;
+        border-radius: 8px;
+      }
+      #fig-card3 h3 {
+        text-align: center;
+        font-size: 25px;
+        padding-top: 10px;
+        color: #323234;
+      }
+      #fig-card3 p {
+        text-align: justify;
+        font-size: 16px;
+        padding: 20px 30px 20px;
+        line-height: 1.5;
+        color: #323234;
       }
       p,
       a,
@@ -27,65 +299,101 @@
   </head>
   <body>
     <header id="header">
-      <h1>My portfolio</h1>
+      <img src="images/pic1.jpeg" alt="profile" class="header-img" />
+      <pre>
+    Building digital
+products and effective
+         solution</pre
+      >
+      <button class="header-but">Contact me</button>
+      <nav id="nav">
+        <a href="#about-me">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact Via Email</a>
+        <a href="contact.html">Contact Via Form</a>
+      </nav>
     </header>
 
-    <nav>
-      <a href="#about-me">About Me</a>
-      <a href="#skills">Skills</a>
-      <a href="#certifications">Certifications</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact Via Email</a>
-      <a href="contact.html">Contact Via Form</a>
-    </nav>
-
     <section id="about-me">
-      <h2>Who am I?</h2>
-      <img src="images/profile.png" alt="user profile here" />
+      <pre>
+          Hello, I am
+          May Zin Thaw!</pre
+      >
+
       <p>
-        Hi there, I am May.I am learning Web Development Foundation Course at
-        zNova.
+        And I am learning Web Development Foundation Course at zNova. <br />
+        My job is to turn your ideas into vibrant visual solutions that will
+        make your brand stand out! <br /><br /><br />
+
+        01------------------HTML <br />
+        02-------------CSS <br />
+        03--------------------Bootstrap
       </p>
     </section>
 
-    <section id="skills">
-      <h2>What I Am Good At</h2>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>Bootstrap</li>
-      </ul>
+    <section class="skills">
+      <div id="card1">
+        <h2 class="card-pro">Project name</h2>
+        <h3 class="card-h3">Destino Travel</h3>
+        <p class="card-p">Tow months</p>
+      </div>
+      <div id="card2">
+        <h2 class="card-pro">Project name</h2>
+        <h3 class="card-h3">Sernsip</h3>
+        <p class="card-p">Tow months</p>
+      </div>
+      <div id="card3">
+        <h2 class="card-pro">Project name</h2>
+        <h3 class="card-h3">Refund Service</h3>
+        <p class="card-p">Tow months</p>
+      </div>
+      <div id="card4">
+        <h2 class="card-pro">Project name</h2>
+        <h3 class="card-h3">University</h3>
+        <p class="card-p">Tow months</p>
+      </div>
+      <button id="see-more">See More</button>
     </section>
 
-    <section id="certifications">
-      <h2>Professional Milestones</h2>
-      <table border="1" cellspacing="0" cellpadding="10">
-        <tr>
-          <th>NO</th>
-          <th>Certification Name</th>
-          <th>Issued by</th>
-          <th>Issued Date</th>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Web Development Foundation</td>
-          <td>CreaNova Academy</td>
-          <td>06/12/2024</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>JS Mastery</td>
-          <td>CreaNova Academy</td>
-          <td>06/12/2024</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Frontend Development with React js</td>
-          <td>CreaNova Academy</td>
-          <td>06/12/2024</td>
-        </tr>
-      </table>
-    </section>
+    <figure>
+      <div id="fig-header"><h2>Certifications</h2></div>
+
+      <div id="fig-card1">
+        <div class="fig-abus-square">
+          <span class="fig-sq-emoji"> &#9731;</span>
+        </div>
+        <h3>Fast Transfer</h3>
+        <p>
+          - Web Development Foundation <br />- Issued by CreaNova Academy <br />
+          - Issued Date 06/12/2024
+        </p>
+      </div>
+
+      <div id="fig-card2">
+        <div class="fig-abus-square">
+          <span class="fig-sq-emoji"> &#9731;</span>
+        </div>
+        <h3>Deposit Funds</h3>
+        <p>
+          - JS Mastery <br />- Issued by CreaNova Academy <br />
+          - Issued Date 06/12/2024
+        </p>
+      </div>
+
+      <div id="fig-card3">
+        <div class="fig-abus-square">
+          <span class="fig-sq-emoji"> &#9731;</span>
+        </div>
+        <h3>Withdraw Funds</h3>
+        <p>
+          - Frontend Development with React js <br />- Issued by CreaNova
+          Academy <br />
+          - Issued Date 06/12/2024
+        </p>
+      </div>
+    </figure>
 
     <section id="projects">
       <h2>My Works</h2>
